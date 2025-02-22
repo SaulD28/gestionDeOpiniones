@@ -1,0 +1,98 @@
+{
+	"info": {
+		"_postman_id": "607e8f1b-41a1-4f9b-93bf-1762f064c008",
+		"name": "Facebook",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "37643492"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Harol\",\r\n    \"surname\": \"Rodriguez\",\r\n    \"username\":\"hrodriguez\",\r\n    \"password\": \"Harol_Rodriguez$3278\",\r\n    \"email\":\"hrodriguez@gmail.com\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/gestionDeOpiniones/v1/auth/register"
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"hrodriguez\",\r\n    \"password\": \"Harol_Rodriguez$3278\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/gestionDeOpiniones/v1/auth/login"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "update user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2I5NjFhNGQxOWQyZmFkODU0MmZjZDYiLCJpYXQiOjE3NDAyMDI0NzUsImV4cCI6MTc0MDIwNjA3NX0.Xjwqx2R-wfmwyiMgHZtrMVyZhPaSuCffBghCf6GHoes"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Emmanuel\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/gestionDeOpiniones/v1/user/updateUser"
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\": \"Harol_Rodriguez$3278\",\r\n    \"newPassword\":\"David_Emmanuel$3278\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/gestionDeOpiniones/v1/user/updatePassword"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
